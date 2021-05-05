@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  </head>
+  <body>
+    <h1 class="header-style"> Welcome to Pinetreest </h1>
+        {% for pic in col %}
+        <a href="{{ pic.urls.raw }}">
+         <img src="{{ pic.urls.small }}">
+         <p>{{pic.description}}</p>
+        </a>
+       {% endfor %}
+    <script src="pintreest.py"></script>
+  </body>
+</html>
+
