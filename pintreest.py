@@ -19,7 +19,8 @@ from unsplash.models import Photo as PhotoModel
 # build page layout (DONE BY APRIL 05/04/2021)
 #LINK API - (DONE BY APRIL 05/04/2021) 
 #DISPLAY IM0AGES - Gerardo (DONE BY APRIL 05/04/2021)
-#Detail page - Pradeep (currently working)
+#Detail page - (currently working)
+#Display stars properly -  (Done By Pradeep 05/12/21)
 #Add functionality to move through pages 
 #Add Reviews
 #star rating system (user can click stars to fill in) 
