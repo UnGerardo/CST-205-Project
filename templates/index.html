@@ -6,25 +6,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <!-- header -->
     <h1 class="header-style">  
-      <i  class="fas fa-tree fa-3x">Welcome to Pinetreest</i>
-      <i  class="fas fa-tree fa-3x"> </i>
+      <i class="fas fa-tree fa-3x"></i>
+      <span id="header-text">Welcome to Pinetreest</span>
+      <i class="fas fa-tree fa-3x"></i>
     </h1>
-    <div class="center"> 
-      {% for pic in col %}
-        <a class="pictures" href="{{ pic.urls.raw }}" >
-          <img src="{{ pic.urls.small }}" class="border">
-          <p>Description:</p>
-          <p class="description">{{pic.description}}...</p>
-        </a>
-        <!-- Add icon library -->
 
-  <!--      <i class="fa fa-star checked"></i>
+    <!-- stars -->
+        <!-- <i class="fa fa-star checked"></i>
         <i class="fa fa-star checked"></i>
         <i class="fa fa-star checked"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i> -->
 
+    <!-- pictures -->
+    <div class="center"> 
+      {% for pic in col %}
+
+        {% if pic.urls.raw == col[29].urls.raw %}
+          <img src="/static/images/woo.gif" alt="woo gif">
+        {% endif %}
+
+        <a class="pictures" href="{{ pic.urls.raw }}">
+          <img src="{{ pic.urls.small }}" class="image-border">
+          <div class="description">            
+            <p>Description:</p>
+            <p>{{pic.description}}...</p>
+          </div>
+        </a>
       {% endfor %}
     </div>
     <script src="pintreest.py"></script>
