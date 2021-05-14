@@ -47,6 +47,8 @@ collection_id = "3334461"
 #Get the collection
 col = api.collection.photos(collection_id, 1, 277)
 
+
+
 #Renders the html and css files
 @app.route('/', methods=["GET"])
 def home():

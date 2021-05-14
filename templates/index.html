@@ -16,19 +16,22 @@
       <i class="fas fa-tree fa-3x"></i>
     </h1>
 
-    <!-- stars -->
-    <div class="rating">
-      <input type="radio" name="Star" id="star1"><label for="star1"></label>
-      <input type="radio" name="Star" id="star2"><label for="star2"></label>
-      <input type="radio" name="Star" id="star3"><label for="star3"></label>
-      <input type="radio" name="Star" id="star4"><label for="star4"></label>
-      <input type="radio" name="Star" id="star5"><label for="star5"></label>
-    </div>
+  
+    
 
     <!-- pictures -->
     <div class="center"> 
       {% for pic in col %}
         <div class="picture-object">
+          
+           <!-- stars -->
+           <div class="rating">
+            <input type="radio" name="Star" id="star1"><label for="star1"></label>
+            <input type="radio" name="Star" id="star2"><label for="star2"></label>
+            <input type="radio" name="Star" id="star3"><label for="star3"></label>
+            <input type="radio" name="Star" id="star4"><label for="star4"></label>
+            <input type="radio" name="Star" id="star5"><label for="star5"></label>
+          </div>
 
           <a class="pictures" href="{{ pic.urls.raw }}">
             <img src="{{ pic.urls.small }}" class="image-border">
@@ -38,12 +41,12 @@
               <p>{{pic.description}}...</p>
             </div>
           </a>
-
+          
         </div>
       {% endfor %}
     </div>
 
-    <img src="/static/images/woo.gif" alt="woo gif">
+    <!-- <img src="/static/images/woo.gif" alt="woo gif"> -->
 
     <script src="pintreest.py"></script>
   </body>

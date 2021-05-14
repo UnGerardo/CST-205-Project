@@ -71,12 +71,13 @@ body {
   justify-content: space-evenly;
   margin-top: 20px;
 }
-
+.picture-object{
+  height: 600px;
+  width: 410px;
+  margin: 100px 20px;
+}
 .pictures {
   color: white;
-  margin: 20px 0;
-  height: max-content;
-  width: 410px;
 }
 
 .image-border {
@@ -101,9 +102,10 @@ body {
 /* stars */
 .rating 
 {
-  position: absolute;
-  top: 126%;
-  left: 45%;
+  /* positioning here */
+  position: relative;
+  top: 0px;
+  left: 27%;
   transform: translate(-50%, -50%) rotateY(180deg);
   display: flex;
 }
@@ -122,6 +124,7 @@ body {
 
 .rating label:before
 {
+  /* positioning here */
   content: '\f005';
   font-family: fontAwesome;
   position: relative;
@@ -132,6 +135,7 @@ body {
 
 .rating label:after
 {
+  /* Positioning here */
   content: '\f005';
   font-family: fontAwesome;
   position: absolute;
