@@ -16,8 +16,7 @@
       <i class="fas fa-tree fa-3x"></i>
     </h1>
 
-  
-    
+    <!-- Fixed stars by making input name attribute unique to each picture, and input id and label for attributes unique for each star -->
 
     <!-- pictures -->
     <div class="center"> 
@@ -25,12 +24,12 @@
         <div class="picture-object">
           
            <!-- stars -->
-           <div class="rating">
-            <input type="radio" name="Star" id="star1"><label for="star1"></label>
-            <input type="radio" name="Star" id="star2"><label for="star2"></label>
-            <input type="radio" name="Star" id="star3"><label for="star3"></label>
-            <input type="radio" name="Star" id="star4"><label for="star4"></label>
-            <input type="radio" name="Star" id="star5"><label for="star5"></label>
+          <div class="rating">
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '1'}}"><label for="{{pic.id + '1'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '2'}}"><label for="{{pic.id + '2'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '3'}}"><label for="{{pic.id + '3'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '4'}}"><label for="{{pic.id + '4'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '5'}}"><label for="{{pic.id + '5'}}"></label>
           </div>
 
           <a class="pictures" href="{{ pic.urls.raw }}">
@@ -38,7 +37,7 @@
 
             <div class="description">            
               <p>Description:</p>
-              <p>{{pic.description}}...</p>
+              <p>{{ pic.description }}...</p>
             </div>
           </a>
           
