@@ -7,8 +7,8 @@
 from flask_bootstrap import Bootstrap
 from flask import Flask, render_template, request
 
-import json
-import requests
+# import json
+# import requests
 
 from unsplash.api import Api
 from unsplash.auth import Auth

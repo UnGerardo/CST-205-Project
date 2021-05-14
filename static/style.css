@@ -24,7 +24,7 @@
   100%{
     background-color: rgb(11, 83, 11);
   }
-  50%{
+  /* 50%{
     background-color: plum;
   }
   75%{
@@ -32,8 +32,7 @@
   }
   55%{
     background-color: papayawhip;
-  }
-    
+  } */
 }
 
 /* body */
@@ -100,17 +99,6 @@ body {
 }
 
 /* stars */
-.checked {
-  color: orange;
-}
-
-/* css star code 1 */
-body 
-{
-  margin: 0;
-  padding: 0;
-  background: #262626;
-}
 .rating 
 {
   position: absolute;
@@ -119,17 +107,19 @@ body
   transform: translate(-50%, -50%) rotateY(180deg);
   display: flex;
 }
+
 .rating input
 {
   display: none;
 }
+
 .rating label 
 {
   display: block;
   cursor : pointer;
   width: 50px;
-  
 }
+
 .rating label:before
 {
   content: '\f005';
@@ -139,6 +129,7 @@ body
   font-size: 35px;
   color: #101010;
 }
+
 .rating label:after
 {
   content: '\f005';
@@ -151,8 +142,8 @@ body
   opacity: 0;
   transition: .5s;
   text-shadow: 0 2px 5px rgba(0,0,0,.5);
-
 }
+
 .rating label:hover:after,
 .rating label:hover ~ label:after,
 .rating input:checked ~ label:after

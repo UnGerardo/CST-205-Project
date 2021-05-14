@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <meta charset="utf-8">
+    <title>Pintreest</title>
   </head>
   <body>
     <!-- header -->
@@ -14,70 +16,35 @@
       <i class="fas fa-tree fa-3x"></i>
     </h1>
 
-    <!-- Html star code-->
-    <p>Checkout these amazing pictures.</p>
-    <meta charset="utf-8">
-    <title>Pintreest Star Rating</title>
-  </head>
-  <body>
-      <div class="rating">
-          <input type="radio" name="Star" id="star1"><label for="star1">
-          </label>
-          <input type="radio" name="Star" id="star2"><label for="star2">
-          </label>
-          <input type="radio" name="Star" id="star3"><label for="star3">
-          </label>
-          <input type="radio" name="Star" id="star4"><label for="star4">
-          </label>
-          <input type="radio" name="Star" id="star5"><label for="star5">
-          </label>
-
-
-      </div>       
-
-      <div class="rating">
-        <input type="radio" name="Star" id="star1"><label for="star1">
-        </label>
-        <input type="radio" name="Star" id="star2"><label for="star2">
-        </label>
-        <input type="radio" name="Star" id="star3"><label for="star3">
-        </label>
-        <input type="radio" name="Star" id="star4"><label for="star4">
-        </label>
-        <input type="radio" name="Star" id="star5"><label for="star5">
-        </label>
-
-
-    </div>       
-
-  </body>
-
-     
-
     <!-- stars -->
-        <!-- <i class="fa fa-star checked"></i>
-        <i class="fa fa-star checked"></i>
-        <i class="fa fa-star checked"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i> -->
+    <div class="rating">
+      <input type="radio" name="Star" id="star1"><label for="star1"></label>
+      <input type="radio" name="Star" id="star2"><label for="star2"></label>
+      <input type="radio" name="Star" id="star3"><label for="star3"></label>
+      <input type="radio" name="Star" id="star4"><label for="star4"></label>
+      <input type="radio" name="Star" id="star5"><label for="star5"></label>
+    </div>
 
     <!-- pictures -->
     <div class="center"> 
       {% for pic in col %}
+        <div class="picture-object">
 
-        {% if pic.urls.raw == col[29].urls.raw %}
-          <img src="/static/images/woo.gif" alt="woo gif">
-        {% endif %}
+          <a class="pictures" href="{{ pic.urls.raw }}">
+            <img src="{{ pic.urls.small }}" class="image-border">
 
-        <a class="pictures" href="{{ pic.urls.raw }}">
-          <img src="{{ pic.urls.small }}" class="image-border">
-          <div class="description">            
-            <p>Description:</p>
-            <p>{{pic.description}}...</p>
-          </div>
-        </a>
+            <div class="description">            
+              <p>Description:</p>
+              <p>{{pic.description}}...</p>
+            </div>
+          </a>
+
+        </div>
       {% endfor %}
     </div>
+
+    <img src="/static/images/woo.gif" alt="woo gif">
+
     <script src="pintreest.py"></script>
   </body>
 </html>
