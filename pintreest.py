@@ -12,8 +12,6 @@ from flask import Flask, render_template, request
 
 from unsplash.api import Api
 from unsplash.auth import Auth
-from unsplash.client import Client
-from unsplash.models import Photo as PhotoModel 
 
 #TO DO:
 # build page layout (DONE BY APRIL 05/04/2021)

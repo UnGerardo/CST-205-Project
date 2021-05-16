@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <meta charset="utf-8">
-    <title>Pintreest</title>
+    <title>Pinetreest</title>
   </head>
   <body>
     <!-- header -->
@@ -23,14 +23,6 @@
       {% for pic in col %}
         <div class="picture-object">
           
-           <!-- stars -->
-          <div class="rating">
-            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '1'}}"><label for="{{pic.id + '1'}}"></label>
-            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '2'}}"><label for="{{pic.id + '2'}}"></label>
-            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '3'}}"><label for="{{pic.id + '3'}}"></label>
-            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '4'}}"><label for="{{pic.id + '4'}}"></label>
-            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '5'}}"><label for="{{pic.id + '5'}}"></label>
-          </div>
 
           <a class="pictures" href="{{ pic.urls.raw }}">
             <img src="{{ pic.urls.small }}" class="image-border">
@@ -40,12 +32,17 @@
               <p>{{ pic.description }}...</p>
             </div>
           </a>
-          
+           <!-- stars -->
+           <div class="rating">
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '1'}}"><label for="{{pic.id + '1'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '2'}}"><label for="{{pic.id + '2'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '3'}}"><label for="{{pic.id + '3'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '4'}}"><label for="{{pic.id + '4'}}"></label>
+            <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '5'}}"><label for="{{pic.id + '5'}}"></label>
+          </div>
         </div>
       {% endfor %}
     </div>
-
-    <!-- <img src="/static/images/woo.gif" alt="woo gif"> -->
 
     <script src="pintreest.py"></script>
   </body>
