@@ -18,7 +18,8 @@
 5. Initializte flask variable FLASK_APP and set it equal to "pintreest.py"
 6. Type "flask run" to run the program
 
-### Link: https://github.com/UnGerardo/CST-205-Project
+### GitHub Link: https://github.com/UnGerardo/CST-205-Project
+### Trello Link: https://trello.com/b/y3FwvK8x/cst-205-project
 
 ### Extra Features:
 An extra feature we would've added if we had more time would be a detail page that would open when you click on an image and this page would display more details about the image.
