@@ -16,8 +16,6 @@
       <i class="fas fa-tree fa-3x"></i>
     </h1>
 
-    <!-- Fixed stars by making input name attribute unique to each picture, and input id and label for attributes unique for each star -->
-
     <!-- pictures -->
     <div class="center"> 
       {% for pic in col %}
@@ -32,7 +30,7 @@
               <p>{{ pic.description }}...</p>
             </div>
           </a>
-           <!-- stars -->
+           <!-- stars. Tutorial link: https://www.youtube.com/watch?v=Ep78KjstQuw -->
            <div class="rating">
             <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '1'}}"><label for="{{pic.id + '1'}}"></label>
             <input type="radio" name="{{'Star' + pic.id}}" id="{{pic.id + '2'}}"><label for="{{pic.id + '2'}}"></label>

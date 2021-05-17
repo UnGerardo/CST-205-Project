@@ -96,7 +96,6 @@ body {
 /* stars */
 .rating 
 {
-  /* positioning here */
   position: relative;
   left: 27%;
   transform: translate(-50%, -50%) rotateY(180deg);
@@ -118,7 +117,6 @@ body {
 
 .rating label:before
 {
-  /* positioning here */
   content: '\f005';
   font-family: fontAwesome;
   position: relative;
@@ -129,7 +127,6 @@ body {
 
 .rating label:after
 {
-  /* Positioning here */
   content: '\f005';
   font-family: fontAwesome;
   position: absolute;

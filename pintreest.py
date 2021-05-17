@@ -1,7 +1,19 @@
-#Authors: April Miller
-#CST205 Professor Avner
-#5 May 2021
-#Program description:
+# COURSE: CST-205
+# TITLE: Pinetreest
+# ABSTRACT: This program diplays pictures of nature using the Unsplash API. The images are displayed along with their description and you have the ability
+# to rate the pictures out of 5 and you can comment in the comment section at the bottom.
+# Authors: April Miller, Melody Neely, Pradeep Pansare, and Gerardo Lopez
+# Date: 5/17/21
+
+# April built the foundation of the website
+# Gerardo added the use of flexbox to the images
+# Pradeep finished the star rating system
+# Melody implemented the star rating on all the images
+# Gerardo fixed a bug that dealt with the star rating system
+# April restyled the page
+# Melody added a comment system
+
+# GITHUB: https://github.com/UnGerardo/CST-205-Project
 
 #Imports
 from flask_bootstrap import Bootstrap
@@ -18,16 +30,6 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import requests,json
-
-#TO DO:
-# build page layout (DONE BY APRIL 05/04/2021)
-#LINK API - (DONE BY APRIL 05/04/2021) 
-#DISPLAY IM0AGES - Gerardo (DONE BY APRIL 05/04/2021)
-#Detail page - (currently working)
-#Display stars properly -  (Done By Pradeep 05/12/21)
-#Add functionality to move through pages 
-#Add Reviews (Done by Melody)
-#star rating system (user can click stars to fill in) 
 
 #Client access key, secret access key, redirect uri, and code needed for Unsplashed API.
 client_id = "etLgSfNf4HL1N-Gdo2nuNs3UPEtQRGcjOSRYdeFW4uc"
@@ -51,13 +53,16 @@ api = Api(auth)
 collection_id = "3334461"
 #Get the collection
 col = api.collection.photos(collection_id, 1, 277)
+
 #gets comments
 class Comments(FlaskForm):
     my_comment= StringField( 
         "Tell Us what you think!",
         validators=[DataRequired()]
     )
+
 comments = []
+
 def store_comments(my_comment):
     comments.append(dict(
         comment= my_comment
