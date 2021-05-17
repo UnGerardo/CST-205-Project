@@ -20,8 +20,7 @@
     <div class="center"> 
       {% for pic in col %}
         <div class="picture-object">
-          
-
+          <!-- Picture and description -->
           <a class="pictures" href="{{ pic.urls.raw }}">
             <img src="{{ pic.urls.small }}" class="image-border">
 
@@ -41,18 +40,20 @@
         </div>
       {% endfor %}
     </div>
+    <!-- Comment System Form -->
     <div class="container">
       <marquee><h1>Tell us what you think!</h1></marquee> 
       <form method = "POST" action ="/"  placeholder = 'Add Your Comment'>
+
         {{form.csrf_token}}
         <!-- {{form.my_comment.label}} -->
         {{form.my_comment(size=65)}}
+
         <input type="submit" value=' insert Comment'>
+
         <div class="card-footer">
           <a href="{{ url_for('vp') }}" class="card-link" > look at comment section</a>
         </div>
-      
-      
       </form>
     </div>
 
