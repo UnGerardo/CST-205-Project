@@ -9,13 +9,13 @@
 /* animation */
 @keyframes bgcolor{
   0%{
-    background-color: rgb(6, 136, 187);
+    background-color: rgb(15, 128, 58);
   }
   30%{
-    background-color: rgb(15, 118, 202);
+    background-color: rgb(13, 153, 99);
   }
   60%{
-    background-color: teal;
+    background-color: rgb(26, 128, 0);
   }
   90%{
     background-color: 
@@ -44,7 +44,7 @@ body {
   border: 3px solid black;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 14px;
-  margin: 20px 0 0;
+  margin: 50px 0 0;
   padding: 10px;
   text-align: center;
   width: 500px;
