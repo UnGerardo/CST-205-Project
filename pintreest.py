@@ -5,13 +5,13 @@
 # Authors: April Miller, Melody Neely, Pradeep Pansare, and Gerardo Lopez
 # Date: 5/17/21
 
-# April built the foundation of the website
-# Gerardo added the use of flexbox to the images
-# Pradeep finished the star rating system
-# Melody implemented the star rating on all the images
-# Gerardo fixed a bug that dealt with the star rating system
-# April restyled the page
-# Melody added a comment system
+# April built the foundation of the website, in the python file with flask and set up the HTML
+# Gerardo added the use of flexbox to the images, in CSS
+# Pradeep finished the star rating system, in HTML and CSS
+# Melody implemented the star rating on all the images, in HTML and CSS
+# Gerardo fixed a bug that dealt with the star rating system, in HTML
+# April restyled the page, in HTML and CSS
+# Melody added a comment system, worked with flask_wtf and created Comments class and created new HTML file comment.html and added CSS
 
 # GITHUB: https://github.com/UnGerardo/CST-205-Project
 
