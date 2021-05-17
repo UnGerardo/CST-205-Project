@@ -15,7 +15,7 @@
 2. In clone project directory (in terminal), create a venv
 3. Activate your venv
 4. Install the following libraries: python-unsplash, flask, bootstrap-flask, and flask_wtf
-5. Initializte flask variable FLASK_APP and set it equal to "pintreest.py"
+5. Initialize flask variable FLASK_APP and set it equal to "pintreest.py"
 6. Type "flask run" to run the program
 
 ### GitHub Link: https://github.com/UnGerardo/CST-205-Project
